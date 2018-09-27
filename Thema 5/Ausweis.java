@@ -8,7 +8,7 @@ public class Ausweis {
     private static int letzteNummer = 1000;
 
     public Ausweis() {
-        Ausweis.setLetzteNummer(Ausweis.getLetzteNummer() + 1);
+        Ausweis.inkrementiereLetzteNummer();
         this.nummer = Ausweis.getLetzteNummer();
         this.setAblauf_datum(LocalDate.now().plusYears(1));
         this.entsperren();
@@ -42,7 +42,7 @@ public class Ausweis {
         return letzteNummer;
     }
 
-    private static void setLetzteNummer(int letzteNummer) {
-        Ausweis.letzteNummer = letzteNummer;
+    private static void inkrementiereLetzteNummer() {
+        letzteNummer++;
     }
 }
