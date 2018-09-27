@@ -55,10 +55,10 @@ public class Buchexemplar {
         leser.getAusgeliehen().add(this);
     }
 
-    public int zurückgeben() {
+    public int zurueckgeben() {
         int verzug = 0;
-        while (LocalDate.now().isAfter(rueckgabeDatum)) {
-            rueckgabeDatum.plusWeeks(1);
+        while (LocalDate.now().isAfter(getRueckgabeDatum())) {
+            setRueckgabeDatum(getRueckgabeDatum().plusWeeks(1));
             verzug++;
         }
         getVerliehenAn().getAusgeliehen().remove(this);

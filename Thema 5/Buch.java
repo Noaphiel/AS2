@@ -48,11 +48,11 @@ public class Buch {
         letzteNummer++;
     }
 
-    public void exemplarHinzufügen() {
+    public void exemplarHinzufuegen() {
         listeVonBuchexemplaren.add(new Buchexemplar());
     }
 
-    public void exemplarLöschen(int nummer) {
+    public void exemplarLoeschen(int nummer) {
         for (int i = 0; i < listeVonBuchexemplaren.size(); i++) {
             if (listeVonBuchexemplaren.get(i).getNummer() == nummer && !listeVonBuchexemplaren.get(i).istVerliehen()) {
                 listeVonBuchexemplaren.remove(i);
@@ -61,7 +61,7 @@ public class Buch {
         }
     }
 
-    public void exemplarLöschen(Buchexemplar b) {
+    public void exemplarLoeschen(Buchexemplar b) {
         if (!b.istVerliehen()) {
             listeVonBuchexemplaren.remove(b);
             listeVonBuchexemplaren.trimToSize();
