@@ -8,6 +8,7 @@ public class Leser {
 
     public Leser(String name) {
         this.name = name;
+        this.leserausweis = new Ausweis();
     }
 
     public String getName() {
