@@ -39,6 +39,6 @@ public class Kunde implements Comparable<Kunde> {
 
     @Override
     public int compareTo(Kunde a) {
-        return this.name.compareTo(a.name); // compareTo der Klasse String
+        return this.name.compareTo(a.name);
     }
 }
