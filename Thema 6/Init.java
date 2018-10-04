@@ -26,6 +26,8 @@ public class Init {
             System.out.println(x.getName());
         }
 
+        System.out.println("");
+
         ArrayList<Konto> konten = new ArrayList<Konto>();
 
         konten.add(new Girokonto("DE2359", list.get(1)));
