@@ -7,7 +7,15 @@ public class Lebensmittel extends Artikel {
     public Lebensmittel(String bez, double preis) {
 
         super(bez, preis);
-        this.mhd = LocalDate.now().plusWeeks(4);
+        this.setMhd(LocalDate.now().plusWeeks(4));
 
+    }
+
+    public LocalDate getMhd() {
+        return mhd;
+    }
+
+    public void setMhd(LocalDate mhd) {
+        this.mhd = mhd;
     }
 }

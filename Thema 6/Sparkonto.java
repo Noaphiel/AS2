@@ -9,7 +9,7 @@ public class Sparkonto extends Konto {
 
     public Sparkonto(String iban, Kunde inhaber, double zinsen) {
         super(iban, inhaber);
-        this.zinssatz = zinsen;
+        this.setZinssatz(zinsen);
     }
 
     @Override
@@ -19,6 +19,14 @@ public class Sparkonto extends Konto {
         else
             this.kontostand += betrag;
         return true;
+    }
+
+    public double getZinssatz() {
+        return zinssatz;
+    }
+
+    public void setZinssatz(double zinssatz) {
+        this.zinssatz = zinssatz;
     }
 
 }
