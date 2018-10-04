@@ -1,4 +1,3 @@
-
 public class Sparkonto extends Konto {
 
     private double zinssatz;
@@ -28,5 +27,4 @@ public class Sparkonto extends Konto {
     public void setZinssatz(double zinssatz) {
         this.zinssatz = zinssatz;
     }
-
 }

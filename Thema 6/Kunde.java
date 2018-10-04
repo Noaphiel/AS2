@@ -1,4 +1,3 @@
-
 class Kunde implements Comparable<Kunde> {
 
     // Anfang Attribute
@@ -9,8 +8,8 @@ class Kunde implements Comparable<Kunde> {
 
     public Kunde(String name) {
         this.name = name;
-        nummer = Kunde.getLetzteNummer() + 1;
-        Kunde.setLetzteNummer(nummer);
+        incrementLetzteNummer();
+        nummer = Kunde.getLetzteNummer();
     }
 
     // Anfang Methoden
@@ -30,8 +29,8 @@ class Kunde implements Comparable<Kunde> {
         return letzteNummer;
     }
 
-    public static void setLetzteNummer(int letzteNummer) {
-        Kunde.letzteNummer = letzteNummer;
+    public static void incrementLetzteNummer() {
+        letzteNummer++;
     }
 
     @Override
@@ -43,5 +42,4 @@ class Kunde implements Comparable<Kunde> {
     public String toString() {
         return this.getName();
     }
-
 }
