@@ -9,11 +9,13 @@ public class Buch {
     private static int letzteNummer = 0;
 
     public Buch() {
+        listeVonBuchexemplaren = new ArrayList<Buchexemplar>();
         inkrementiereLetzteNummer();
         this.nummer = getLetzteNummer();
     }
 
     public Buch(String autor, String titel) {
+        listeVonBuchexemplaren = new ArrayList<Buchexemplar>();
         inkrementiereLetzteNummer();
         this.nummer = getLetzteNummer();
         this.autor = autor;

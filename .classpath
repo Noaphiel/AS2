@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="Thema 3"/>
 	<classpathentry kind="src" path="Thema 4"/>
 	<classpathentry kind="src" path="Thema 5"/>
+	<classpathentry kind="src" path="Thema 6"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

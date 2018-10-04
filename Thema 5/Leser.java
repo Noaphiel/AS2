@@ -7,6 +7,7 @@ public class Leser {
     private ArrayList<Buchexemplar> ausgeliehen;
 
     public Leser(String name) {
+        ausgeliehen = new ArrayList<Buchexemplar>();
         this.name = name;
         erstelleAusweis();
     }
