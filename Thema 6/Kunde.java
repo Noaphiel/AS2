@@ -1,44 +1,47 @@
-/**
- * Übung zu Interfaces
- *
- * @version 1.0 vom 02.10.2018
- * @author Sven Grothe
- */
 
-public class Kunde implements Comparable<Kunde> {
+class Kunde implements Comparable<Kunde> {
 
-    private String name;
-    private static int letzteNummer = 0;
-    private int nummer;
+	// Anfang Attribute
+	private String name;
+	private static int letzteNummer = 0;
+	private int nummer;
+	// Ende Attribute
 
-    public Kunde(String name) {
-        this.name = name;
-        this.nummer = getLetzteNummer();
-        inkrementiereLetzteNummer();
-    }
+	public Kunde(String name) {
+		this.name = name;
+		nummer = Kunde.getLetzteNummer() + 1;
+		Kunde.setLetzteNummer(nummer);
+	}
 
-    public String getName() {
-        return name;
-    }
+	// Anfang Methoden
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String nameNeu) {
-        name = nameNeu;
-    }
+	public void setName(String nameNeu) {
+		name = nameNeu;
+	}
 
-    public int getNummer() {
-        return nummer;
-    }
+	public int getNummer() {
+		return nummer;
+	}
 
-    private static int getLetzteNummer() {
-        return letzteNummer;
-    }
+	public static int getLetzteNummer() {
+		return letzteNummer;
+	}
 
-    private static void inkrementiereLetzteNummer() {
-        letzteNummer++;
-    }
+	public static void setLetzteNummer(int letzteNummer) {
+		Kunde.letzteNummer = letzteNummer;
+	}
 
-    @Override
-    public int compareTo(Kunde a) {
-        return this.name.compareTo(a.name);
-    }
+	@Override
+	public int compareTo(Kunde b) {
+		return this.getName().compareTo(b.getName());
+	}
+	
+	@Override
+	public String toString() {
+		return this.getName();
+	}
+
 }

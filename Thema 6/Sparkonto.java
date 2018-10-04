@@ -1,14 +1,23 @@
+
 public class Sparkonto extends Konto {
 
-    private double guthabenZinssatz;
+	private double zinssatz;
+	
+	public Sparkonto(String iban, Kunde inhaber) {
+		super(iban, inhaber);
+	}
+	
+	public Sparkonto(String iban, Kunde inhaber, double zinsen) {
+		super(iban, inhaber);
+		this.zinssatz = zinsen;
+	}
 
-    public Sparkonto(String iban, Kunde inhaber) {
-        super(iban, inhaber);
-    }
+	@Override
+	public boolean transaktion(double betrag) {
+		if ((this.getKontostand() + betrag) <= 0)
+			return false;
+		else this.kontostand += betrag;
+		return true;
+	}
 
-    @Override
-    public boolean transaktion(double betrag) {
-        // TODO Auto-generated method stub
-        return false;
-    }
 }
