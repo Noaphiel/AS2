@@ -28,6 +28,10 @@ public class Bestellung {
         return true;
     }
 
+    public boolean hinzufuegenPosition(Artikel a, int anzahl) {
+        return hinzufuegenPosition(new Bestellposition(a, anzahl));
+    }
+
     public Kunde getKunde() {
         return kunde;
     }
@@ -47,6 +51,13 @@ public class Bestellung {
         } else
             return false;
 
+    }
+
+    public boolean entfernenPosition(Artikel a, int anzahl) {
+        for (Bestellposition bp : positionen)
+            if (bp.getAnzahl() == anzahl && bp.getPosition().equals(a))
+                return positionen.remove(bp);
+        return false;
     }
 
 }
