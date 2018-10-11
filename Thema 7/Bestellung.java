@@ -14,8 +14,17 @@ public class Bestellung {
     }
 
     public boolean hinzufuegenPosition(Bestellposition p) {
+        // Falls p schon in positionen enthalten:
+        // Anzahl im schon vorhandenen objekt erhöhen
+        for (Bestellposition bp : positionen)
+
+            if (bp.getPosition().equals(p.getPosition())) {
+                bp.setAnzahl(bp.getAnzahl() + p.getAnzahl());
+                return true;
+            }
+
         positionen.add(p);
-        // TODO Falls schon vorhanden, nur anzahl erhöhen
+
         return true;
     }
 

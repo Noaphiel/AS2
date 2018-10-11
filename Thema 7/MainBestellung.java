@@ -35,7 +35,7 @@ public class MainBestellung {
         Scanner sc = new Scanner(System.in);
         System.out.println("Hallo " + kunden.get(0).getName() + ", bitte teile mir mit, was du bestellen möchtest:");
         String wunschartikel = sc.nextLine();
-        // TODO gefunden?
+
         System.out.println("Wie viele davon?");
         Artikel art = new Artikel(wunschartikel, 0.0, 0);
         boolean found = false;
