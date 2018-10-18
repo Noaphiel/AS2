@@ -16,7 +16,7 @@ public class Girokonto extends Konto {
 
     @Override
     public boolean transaktion(double betrag) {
-        if ((this.getKontostand() + betrag) < dispo)
+        if ((this.getKontostand() + betrag) <= dispo)
             return false;
         else
             this.kontostand += betrag;
